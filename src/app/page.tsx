@@ -14,6 +14,8 @@ export default async function Home() {
   //   required: true
   // })
 
+
+
   return (
     <main>
       <div>
@@ -23,7 +25,7 @@ export default async function Home() {
               
             
                 <CurrentDate />
-                <h1 className='text-2xl py-1 font-bold'>Hey, {session?.user?.name.split(' ')[0]}!</h1>
+                <h1 className='text-2xl py-1 font-bold'>Hey, {session?.user?.name?.split(' ')[0]}!</h1>
         
               <div className='flex justify-center gap-6 bg-[#F3F5FA] py-6'>
                 <AnalyticsTile num={95} tag="percentile" color1='#B74B80' color2='#E54167'/>
