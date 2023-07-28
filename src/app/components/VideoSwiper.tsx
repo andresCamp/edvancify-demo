@@ -1,6 +1,7 @@
 'use client'
+
 import { ReactNode, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 interface VideoSwiperProps {
   children: ReactNode;
@@ -30,7 +31,7 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
 
       const touchEnd = event.touches[0].clientY;
       const diff = touchEnd - touchStartRef.current!;
-      const sensitivity = 10; // Adjust this value to control swipe sensitivity
+      const sensitivity = 50; // Adjust this value to control swipe sensitivity
 
       if (diff > sensitivity) {
         // Swiped down
@@ -63,6 +64,8 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
 };
 
 export default VideoSwiper;
+
+
 
 
 
