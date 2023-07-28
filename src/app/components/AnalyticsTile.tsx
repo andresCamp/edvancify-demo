@@ -35,7 +35,7 @@ const AnalyticsTile: React.FC<AnalyticsTileProps> = ({ num, tag, expandedText, c
   return (
     <div ref={tileRef} onClick={handleToggleExpand} className={`transition-transform duration-500 ease-in-out ${containerClass}`}>
       <div 
-        className={`p-4 py-6 flex text-white flex-col items-center animate-fadeIn justify-center shadow-lg rounded-xl bg-gradient-to-r from-[${color1}] to-[${color2}] cursor-pointer`}
+        className={`p-4 py-6 flex text-white flex-col items-center animate-fadeIn justify-center shadow-lg rounded-xl bg-gradient-to-r from-color1 to-color2 cursor-pointer`}
       >
         {/* Display different text depending on whether the tile is expanded or not */}
         {isExpanded ? <p className="text-xs font-sans font-light tracking-wider">{expandedText}</p> : 

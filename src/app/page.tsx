@@ -26,9 +26,9 @@ export default async function Home() {
                 <h1 className='text-2xl py-1 font-bold'>Hey, {session?.user?.name?.split(' ')[0]}!</h1>
         
               <div className='flex justify-center gap-6 bg-[#F3F5FA] py-6'>
-                <AnalyticsTile num={95} tag="percentile" color1='#B74B80' color2='#E54167' expandedText="Percentile ranks your performance or score in comparison to others."/>
-                <AnalyticsTile num={0} tag="completed" color1='#D5F0FF' color2='#B4DEF3' expandedText="Total lesson completed."/>
-                <AnalyticsTile num={0} tag="day streak" color1='#D5F0FF' color2='#B4DEF3' expandedText="Number of days you've entered the platform."/>
+                <AnalyticsTile num={95} tag="percentile" color1='color1' color2='color2' expandedText="Percentile ranks your performance or score in comparison to others."/>
+                <AnalyticsTile num={0} tag="completed" color1='color3' color2='color4' expandedText="Total lesson completed."/>
+                <AnalyticsTile num={0} tag="day streak" color1='color3' color2='color4' expandedText="Number of days you've entered the platform."/>
               </div>
             </div>
 
