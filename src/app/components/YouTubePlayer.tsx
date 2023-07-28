@@ -6,9 +6,9 @@ interface YouTubePlayerProps {
 
 const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ youtubeLink }) => {
   return (
-    <div className="relative w-full h-full z-50">
-        <iframe
-        className="absolute top-0 left-0 w-full h-full z-10"
+    <div style={{ overflow: 'hidden' }}>
+      <iframe
+        className="w-full h-full"
         width="100%"
         height="100%"
         src={youtubeLink}
@@ -16,8 +16,8 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ youtubeLink }) => {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        ></iframe>
-  </div>
+      ></iframe>
+    </div>
   );
 };
 
