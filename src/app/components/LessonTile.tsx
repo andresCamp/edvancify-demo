@@ -30,7 +30,7 @@ const AnalyticsTile: React.FC<LessonTileProps> = ({ title, description }) => {
                     {/* <ProgressBar completed={60} bgColor="white" /> */}
                 
                 </div>
-                <div className='flex items-center justify-center gap-8'>
+                <div className='flex items-center justify-center gap-6'>
                     <Button1/>
                 </div>
 

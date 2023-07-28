@@ -1,14 +1,36 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react';
 
-const loading = () => {
+// Define your colors
+const colors = ["red", "yellow", "green", "blue", "indigo", "purple", "pink"];
+
+const Loading = () => {
+  const [color, setColor] = useState('');
+
+  // Change color every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Pick a random color
+      const newColor = colors[Math.floor(Math.random() * colors.length)];
+
+      // Set the new color
+      setColor(newColor);
+    }, 300);
+
+    // Cleanup on unmount
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div>
-      Loading
+    <div className="flex items-center justify-center min-h-screen">
+      <div className={`text-2xl tracking-wide font-sans font-bold text-${color}-600 animate-pulse`}>
+        Loading
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default loading
+export default Loading;
 
 
 // example 

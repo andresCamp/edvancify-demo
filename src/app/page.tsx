@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Navbar from './components/Navbar'
 import { getServerSession } from 'next-auth/next'
 import { options } from './api/auth/[...nextauth]/options'
-import Welcome from './components/Welcome'
-import AnalyticsTiles from './components/AnalyticsTiles'
 import AnalyticsTile from './components/AnalyticsTile'
 import CurrentDate from './components/CurrentDate'
 import LessonTile from './components/LessonTile'
@@ -17,11 +15,11 @@ export default async function Home() {
 
 
   return (
-    <main>
+    <main className='pb-32'>
       <div>
         {session ? (
           <div>
-            <div className='px-5 py-6 rounded-b-3xl bg-[#F3F5FA]'>
+            <div className='px-5 py-6 rounded-b-3xl bg-[#F3F5FA] overflow-scroll'>
               
             
                 <CurrentDate />
