@@ -6,11 +6,9 @@ interface YouTubePlayerProps {
 
 const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ youtubeLink }) => {
   return (
-    <div style={{ overflow: 'hidden' }}>
+    <div className="fixed inset-0">
       <iframe
         className="w-full h-full"
-        width="100%"
-        height="100%"
         src={youtubeLink}
         title="YouTube video player"
         frameBorder="0"
@@ -22,3 +20,4 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ youtubeLink }) => {
 };
 
 export default YouTubePlayer;
+
