@@ -39,10 +39,10 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
 
       if (diff > sensitivity) {
         // Swiped down
-        if (index > 1) {
+        if (index >= 1) {
           router.push(`/library/video/short${index - 1}`);
         }
-      } else if (diff < -sensitivity) {
+      } else if (index < 4 && diff < -sensitivity) {
         // Swiped up
         router.push(`/library/video/short${index + 1}`);
       }
