@@ -9,7 +9,13 @@ interface QuestionProps {
   };
 }
 
-const Question: React.FC<QuestionProps> = ({ question }) => {
+
+
+const Question: React.FC<QuestionProps> = ({ question = {
+    questionText: "",
+    correctAnswer: "",
+    options: [],
+  } }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
   const [showFeedback, setShowFeedback] = useState(false);
