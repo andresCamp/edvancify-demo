@@ -8,14 +8,15 @@ const Header = () => {
 
   return (
     // <div className='h-20 w-full border-b-2 flex items-center justify-between p-2'>
-    <div className='h-20 w-full border-b-2 flex items-center justify-center p-2 bg-[#F3F5FA] shadow-none'>
+    <div className='w-full h-10 flex gap-1 items-center justify-center bg-[#F3F5FA] shadow-none'>
 
         <Image
-          src="/edvancify.svg"
+          src="/edvancifyicon.png"
           alt="Edvancify Logo"
-          width={100}
-          height={100}
+          width={25}
+          height={25}
         />
+        <p className='font-bold text-xl'>edvancify</p>
         {/* <FiSettings/> */}
     </div>
   )

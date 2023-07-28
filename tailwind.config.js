@@ -7,6 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
+      },
+      boxShadow: {
+        'top': 'inset 0 4px 6px 0 rgba(0, 0, 0, 0.1)',
+      },
       // fontFamily: {
       //   'sans': ['Open Sans Pro', ...defaultTheme.fontFamily.sans],
       // },
