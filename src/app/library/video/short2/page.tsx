@@ -8,7 +8,7 @@ const page = () => {
     const short1Object = shortsData.find((item) => item.id === "short2");
 
   return (
-    <div>
+    <div className='overflow-none'>
         <VideoSwiper index={2}>
             <YouTubePlayer youtubeLink={short1Object?.youtubeLink}/>
             <Link className='absolute top-5 left-1/2 transform -translate-x-1/2 text-2xl bg-black ring-1 ring-white text-white py-6 px-8 rounded-full z-50' 

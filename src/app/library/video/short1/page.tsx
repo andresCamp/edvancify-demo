@@ -9,7 +9,7 @@ const page = () => {
 
   return (
     <VideoSwiper index={1}>
-        <div>
+        <div className='overflow-none'>
             <YouTubePlayer youtubeLink={short1Object?.youtubeLink}/>
             <Link className='absolute top-5 left-1/2 transform -translate-x-1/2 text-2xl bg-black ring-1 ring-white text-white py-4 px-6 rounded-full z-50' 
                 href={"/library"}>

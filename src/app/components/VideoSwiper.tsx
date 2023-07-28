@@ -16,20 +16,21 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
     const container = containerRef.current;
     if (!container) return;
 
+    let isSwiping = false;
+
     const handleTouchStart = (event: TouchEvent) => {
+      isSwiping = true;
       touchStartRef.current = event.touches[0].clientY;
     };
 
     const handleTouchMove = (event: TouchEvent) => {
+      if (!isSwiping) return;
+
       event.preventDefault();
-    };
 
-    const handleTouchEnd = (event: TouchEvent) => {
-      if (touchStartRef.current === null) return;
-
-      const touchEnd = event.changedTouches[0].clientY;
-      const diff = touchEnd - touchStartRef.current;
-      const sensitivity = 50; // Adjust this value to control swipe sensitivity
+      const touchEnd = event.touches[0].clientY;
+      const diff = touchEnd - touchStartRef.current!;
+      const sensitivity = 10; // Adjust this value to control swipe sensitivity
 
       if (diff > sensitivity) {
         // Swiped down
@@ -40,7 +41,10 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
         // Swiped up
         router.push(`/ShortsAndQuestions/${index + 1}`);
       }
+    };
 
+    const handleTouchEnd = () => {
+      isSwiping = false;
       touchStartRef.current = null;
     };
 
@@ -59,6 +63,7 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
 };
 
 export default VideoSwiper;
+
 
 
 // import { ReactNode, useEffect, useRef } from 'react';
