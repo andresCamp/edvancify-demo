@@ -6,7 +6,7 @@ interface YouTubePlayerProps {
 
 const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ youtubeLink }) => {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full z-50">
         <iframe
         className="absolute top-0 left-0 w-full h-full z-10"
         width="100%"
