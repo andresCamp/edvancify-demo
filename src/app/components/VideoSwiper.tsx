@@ -35,7 +35,7 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
       }
 
       const diff = endX - startXRef.current;
-      const sensitivity = 20; // Adjust this value to control swipe sensitivity
+      const sensitivity = 5; // Adjust this value to control swipe sensitivity
 
       if (diff > sensitivity) {
         // Swiped down
