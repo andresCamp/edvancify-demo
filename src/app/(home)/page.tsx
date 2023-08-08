@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import Navbar from './components/Navbar'
+import Navbar from '../components/Navbar'
 import { getServerSession } from 'next-auth/next'
-import { options } from './api/auth/[...nextauth]/options'
-import AnalyticsTile from './components/AnalyticsTile'
-import CurrentDate from './components/CurrentDate'
-import LessonTile from './components/LessonTile'
-import { lessonData } from './library/lessons'
+import { options } from '../api/auth/[...nextauth]/options'
+import AnalyticsTile from '../components/AnalyticsTile'
+import CurrentDate from '../components/CurrentDate'
+import LessonTile from '../components/LessonTile'
+import { lessonData } from '../library/lessons'
 
 export default async function Home() {
   const session = await getServerSession(options)

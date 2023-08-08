@@ -5,8 +5,7 @@ import LessonTile from '../components/LessonTile'
 import { lessonData } from "./lessons"
 
 const page = () => {
-  console.log("lessonData")
-  console.log(lessonData)
+
   return (
     <div className="">
       <div className='px-5 py-6 rounded-b-3xl bg-[#F3F5FA] flex items-center justify-center'>

@@ -27,11 +27,11 @@ export default function RootLayout({
       <html lang="en">
         <body className={comfortaa.className}>
           <Provider>
-            <Header/>
+            {/* <Header/> */}
             <div>
               {children}
             </div>
-            <Navbar/>
+            {/* <Navbar/> */}
           </Provider>
         </body>
       </html>

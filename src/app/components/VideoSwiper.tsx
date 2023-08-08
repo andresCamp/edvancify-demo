@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Change this to 'next/router', not 'next/navigation'
-import { shortsData } from '../library/(video)/video/data';
+import { shortsData } from '../(video)/video/data';
 
 interface VideoSwiperProps {
   children: ReactNode;
@@ -18,12 +18,12 @@ const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
         case 'ArrowDown':
           // Move up a video
           if (index < shorts.length)
-          router.push(`/library/video/short${index + 1}`);
+          router.push(`/video/short${index + 1}`);
           break;
         case 'ArrowUp':
           // Move down a video
           if (index > 1) {
-            router.push(`/library/video/short${index - 1}`);
+            router.push(`/video/short${index - 1}`);
           }
           break;
         default:
