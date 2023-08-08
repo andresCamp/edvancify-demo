@@ -1,7 +1,8 @@
 export const shortsData = [
     {
         id: "short1",
-        youtubeLink: "https://youtube.com/embed/AoUUnpoFviA",
+        // youtubeLink: "https://youtube.com/embed/AoUUnpoFviA",
+        youtubeLink: "https://youtube.com/embed/LT_KHh4tzeE",
         questions: [
         {
             questionText: "What is a mole in chemistry?",
@@ -22,7 +23,9 @@ export const shortsData = [
     },
     {
       id: "short2",
-      youtubeLink: "https://youtube.com/embed/JDH5UFcINKY",
+      // youtubeLink: "https://www.youtube.com/watch?v=kU45j_V5Xsc",
+      youtubeLink: "https://youtube.com/embed/IWjbQrW3RPU",
+
       questions: [
         {
             questionText: "If you have the balanced chemical equation: 2H\(_2\) + O\(_2\) -> 2H\(_2\)O, how many moles of O\(_2\) are needed to react with 4 moles of H\(_2\)?",
@@ -44,7 +47,9 @@ export const shortsData = [
     },
     {
         id: "short3",
-        youtubeLink: "https://youtube.com/embed/PvKSEQ8RYdE",
+      youtubeLink: "https://youtube.com/embed/kU45j_V5Xsc",
+
+        // youtubeLink: "https://youtube.com/embed/PvKSEQ8RYdE",
         questions: [
           {
               questionText: "Which formula would you use to calculate the number of moles if you know the mass of the substance and its molar mass?",

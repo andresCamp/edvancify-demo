@@ -7,15 +7,26 @@ import ProgressBar from '@ramonak/react-progress-bar';
 type LessonTileProps = {
     title: string;
     description: string;
+    src: string;
+    color1: string;
 
   };
 
-const AnalyticsTile: React.FC<LessonTileProps> = ({ title, description }) => {
+  
+  const LessonTile: React.FC<LessonTileProps> = ({ title, description, src, color1 }) => {
+    console.log(color1)
+    
+    function hexToRGB(hex: string): string | null {
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : null;
+      }
+      
+
   return (
-    <div className='rounded-xl bg-[#CDE7FB] animate-fadeIn flex flex-col items-center justify-center'>
+    <div style={{background: `rgba(${hexToRGB(color1)}, 0.3)`}} className='rounded-xl bg-[#CDE7FB] animate-fadeIn flex flex-col items-center justify-center'>
         <div className='flex justify-center py-5 items-center -mb-24'>
             <Image
-                src="/mole.png"
+                src={src}
                 alt="mole"
                 width={225}
                 height={225}
@@ -23,12 +34,12 @@ const AnalyticsTile: React.FC<LessonTileProps> = ({ title, description }) => {
         </div>
 
         <div className='flex'>
-            <div className='flex flex-row p-6 py-4 m-3 gap-4 animate-fadeIn text-white content-end align-end rounded-xl backdrop-blur-xs bg-[#0068FF] bg-opacity-75'>
+            <div style={{background: `${color1}`}} className={`flex flex-row p-6 py-4 m-3 gap-4 animate-fadeIn text-white content-end align-end rounded-xl backdrop-blur-xs bg-[${color1}] bg-opacity-75`}>
                 <div className='flex flex-col gap-2'>
                     <h1 className='text-3xl'>{title}</h1>
                     <p className="text-s font-sans font-light text-opacity-50 tracking-wide">{description}</p>
-                    {/* <ProgressBar completed={60} bgColor="white" /> */}
-                
+
+
                 </div>
                 <div className='flex items-center justify-center gap-6'>
                     <Button1/>
@@ -42,7 +53,7 @@ const AnalyticsTile: React.FC<LessonTileProps> = ({ title, description }) => {
   )
 }
 
-export default AnalyticsTile
+export default LessonTile
 
 
 {/* <div className='rounded-xl bg-[#CDE7FB]'>

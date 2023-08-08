@@ -5,12 +5,14 @@ import { options } from './api/auth/[...nextauth]/options'
 import AnalyticsTile from './components/AnalyticsTile'
 import CurrentDate from './components/CurrentDate'
 import LessonTile from './components/LessonTile'
+import { lessonData } from './library/lessons'
 
 export default async function Home() {
   const session = await getServerSession(options)
   // const {data: session} = useSession({
   //   required: true
   // })
+  const lesson = lessonData[0]
 
 
 
@@ -26,14 +28,24 @@ export default async function Home() {
                 <h1 className='text-2xl py-1 font-bold'>Hey, {session?.user?.name?.split(' ')[0]}!</h1>
         
               <div className='flex justify-center gap-6 bg-[#F3F5FA] py-6'>
-                <AnalyticsTile num={95} tag="percentile" color1='color1' color2='color2' expandedText="Percentile ranks your performance or score in comparison to others."/>
-                <AnalyticsTile num={0} tag="completed" color1='color3' color2='color4' expandedText="Total lesson completed."/>
-                <AnalyticsTile num={0} tag="day streak" color1='color3' color2='color4' expandedText="Number of days you've entered the platform."/>
+                <AnalyticsTile num={95} tag="percentile" color1='#B74B80' color2='#E54167' expandedText="Percentile ranks your performance or score in comparison to others."/>
+                <AnalyticsTile num={14} tag="completed" color1='#299BBF' color2='#4CB1D4' expandedText="Total lesson completed."/>
+                <AnalyticsTile num={3} tag="day streak" color1='#81C7EA' color2='#4CB1D4' expandedText="Number of days you've entered the platform."/>
               </div>
             </div>
 
-            <div className='mx-4 my-10'>
-              <LessonTile title="Moles" description="Everything you need to know about moles"/>
+            <div className='flex flex-col mx-4 my-10 gap-4'>
+              {/* <LessonTile title={moleData.title} description={moleData.description} src={moleData.src} color1={moleData.color1}> */}
+              <h3 className='font-black text-xl'>Next Lesson</h3>
+           
+              <LessonTile
+                key={lesson.id}
+                title={lesson.title}
+                description={lesson.description} // Correcting typo in the description
+                src={lesson.src}
+                color1={lesson.color1}
+              />
+              
             </div>
           </div>
 

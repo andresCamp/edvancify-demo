@@ -4,6 +4,7 @@ import GitHubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 
+
 export const options: NextAuthOptions = {
     providers: [
         GoogleProvider({

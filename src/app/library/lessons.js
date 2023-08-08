@@ -1,0 +1,48 @@
+export const lessonData = [
+    {
+        id:"0",
+        title: "Moles",
+        description: "Everything you need to know about moles",
+        src: "/mole.png",
+        color1: '#0068FF',
+        color2: "",
+        color3: "",
+    },
+    {
+        id:"1",
+        title: "Organic Chemistry",
+        description: "Everything you need to know about Orgo",
+        src: "/organic.png",
+        color1: "#3EB489",
+        color2: "",
+        color3: "",
+    },
+    {
+        id:"2",
+        title: "Acids and Bases",
+        description: "Everything you need to know about Orgo",
+        src: "/acidbase.png",
+        color1: "#b042ff",
+        color2: "",
+        color3: "",
+    },
+    {
+        id:"3",
+        title: "Energetics",
+        description: "Everything you need to know about Orgo",
+        src: "/energetics.png",
+        color1: "#fe6e00",
+        color2: "",
+        color3: "",
+    },
+    {
+        id:"4",
+        title: "Qualitative Chemistry",
+        description: "Everything you need to know about Orgo",
+        src: "/mole.png",
+        color1: "#021ca4",
+        color2: "",
+        color3: "",
+    },
+  ];
+  
