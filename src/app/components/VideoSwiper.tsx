@@ -1,6 +1,7 @@
 'use client'
-import { ReactNode, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { ReactNode, useEffect } from 'react';
+import { useRouter } from 'next/navigation'; // Change this to 'next/router', not 'next/navigation'
+import { shortsData } from '../library/video/data';
 
 interface VideoSwiperProps {
   children: ReactNode;
@@ -9,57 +10,35 @@ interface VideoSwiperProps {
 
 const VideoSwiper: React.FC<VideoSwiperProps> = ({ children, index }) => {
   const router = useRouter();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const touchStartRef = useRef<number | null>(null);
+  const shorts = shortsData
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    let isSwiping = false;
-
-    const handleTouchStart = (event: TouchEvent) => {
-      isSwiping = true;
-      touchStartRef.current = event.touches[0].clientY;
-    };
-
-    const handleTouchMove = (event: TouchEvent) => {
-      if (!isSwiping) return;
-
-      event.preventDefault();
-
-      const touchEnd = event.touches[0].clientY;
-      const diff = touchEnd - touchStartRef.current!;
-      const sensitivity = 50; // Adjust this value to control swipe sensitivity
-
-      if (diff > sensitivity) {
-        // Swiped down
-        if (index > 0) {
-          router.push(`/ShortsAndQuestions/${index - 1}`);
-        }
-      } else if (diff < -sensitivity) {
-        // Swiped up
-        router.push(`/ShortsAndQuestions/${index + 1}`);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      switch (event.code) {
+        case 'ArrowDown':
+          // Move up a video
+          if (index < shorts.length)
+          router.push(`/library/video/short${index + 1}`);
+          break;
+        case 'ArrowUp':
+          // Move down a video
+          if (index > 1) {
+            router.push(`/library/video/short${index - 1}`);
+          }
+          break;
+        default:
+          break;
       }
     };
 
-    const handleTouchEnd = () => {
-      isSwiping = false;
-      touchStartRef.current = null;
-    };
-
-    container.addEventListener('touchstart', handleTouchStart);
-    container.addEventListener('touchmove', handleTouchMove, { passive: false });
-    container.addEventListener('touchend', handleTouchEnd);
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      container.removeEventListener('touchstart', handleTouchStart);
-      container.removeEventListener('touchmove', handleTouchMove);
-      container.removeEventListener('touchend', handleTouchEnd);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [index, router]);
 
-  return <div ref={containerRef}>{children}</div>;
+  return <div>{children}</div>;
 };
 
 export default VideoSwiper;

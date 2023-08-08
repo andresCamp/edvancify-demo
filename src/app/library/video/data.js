@@ -2,7 +2,8 @@ export const shortsData = [
     {
         id: "short1",
         // youtubeLink: "https://youtube.com/embed/AoUUnpoFviA",
-        youtubeLink: "https://youtube.com/embed/LT_KHh4tzeE",
+        // youtubeLink: "https://youtube.com/embed/LT_KHh4tzeE",
+        youtubeLink: "https://www.youtube.com/embed/LT_KHh4tzeE?disablekb=1",
         questions: [
         {
             questionText: "What is a mole in chemistry?",
@@ -64,28 +65,28 @@ export const shortsData = [
           // More questions as needed...
         ],
       },
-      {
-        id: "short4",
-        youtubeLink: "https://www.youtube.com/embed/9L_p1NN3rOc",
-        questions: [
-          {
-              questionText: "Which one of these statements about the mole is incorrect?",
-              correctAnswer: "A mole of a substance is always smaller in mass than a mole of another substance",
-              options: ["A mole of any substance contains Avogadro's number of entities", "The molar mass of an element in g/mol is numerically equal to the element's atomic mass in atomic mass units", "A mole is a measure of the number of atoms in exactly 12 grams of carbon-12", "A mole of a substance is always smaller in mass than a mole of another substance"]
-          },
-          {
-              questionText: "What is the relationship between the mole and Avogadro's number?",
-              correctAnswer: "A mole contains Avogadro's number of entities",
-              options: ["A mole is smaller than Avogadro's number", "A mole is larger than Avogadro's number", "A mole contains Avogadro's number of entities", "There is no relationship between a mole and Avogadro's number"]
-          },
-          {
-              questionText: "Avogadro's number is crucial for the concept of a mole. What does it represent?",
-              correctAnswer: "The number of atoms in exactly 12 grams of carbon-12",
-              options: ["The number of atoms in exactly 12 grams of carbon-12", "The number of particles in exactly one gram of a substance", "The number of moles in one gram of a substance", "The number of molecules in one liter of a substance"]
-          },
-          // More questions as needed...
-        ],
-      },
+      // {
+      //   id: "short4",
+      //   youtubeLink: "https://www.youtube.com/embed/9L_p1NN3rOc",
+      //   questions: [
+      //     {
+      //         questionText: "Which one of these statements about the mole is incorrect?",
+      //         correctAnswer: "A mole of a substance is always smaller in mass than a mole of another substance",
+      //         options: ["A mole of any substance contains Avogadro's number of entities", "The molar mass of an element in g/mol is numerically equal to the element's atomic mass in atomic mass units", "A mole is a measure of the number of atoms in exactly 12 grams of carbon-12", "A mole of a substance is always smaller in mass than a mole of another substance"]
+      //     },
+      //     {
+      //         questionText: "What is the relationship between the mole and Avogadro's number?",
+      //         correctAnswer: "A mole contains Avogadro's number of entities",
+      //         options: ["A mole is smaller than Avogadro's number", "A mole is larger than Avogadro's number", "A mole contains Avogadro's number of entities", "There is no relationship between a mole and Avogadro's number"]
+      //     },
+      //     {
+      //         questionText: "Avogadro's number is crucial for the concept of a mole. What does it represent?",
+      //         correctAnswer: "The number of atoms in exactly 12 grams of carbon-12",
+      //         options: ["The number of atoms in exactly 12 grams of carbon-12", "The number of particles in exactly one gram of a substance", "The number of moles in one gram of a substance", "The number of molecules in one liter of a substance"]
+      //     },
+      //     // More questions as needed...
+      //   ],
+      // },
     // More shorts as needed...
   ];
   
