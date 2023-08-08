@@ -1,5 +1,5 @@
 import React from 'react'
-import { shortsData } from '../../video/data'
+import { shortsData } from '../../(video)/video/data'
 import Question from '@/app/components/Question'
 import Link from 'next/link'
 

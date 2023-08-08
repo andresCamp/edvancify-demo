@@ -9,13 +9,11 @@ export default function VideoLayout({
 }) {
   return (
     // <Provider store={store}>
-      <html lang="en">
           <Provider>
             <div>
               {children}
             </div>
           </Provider>
-      </html>
     // </Provider>
   )
 }

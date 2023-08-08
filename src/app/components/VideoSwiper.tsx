@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Change this to 'next/router', not 'next/navigation'
-import { shortsData } from '../library/video/data';
+import { shortsData } from '../library/(video)/video/data';
 
 interface VideoSwiperProps {
   children: ReactNode;
